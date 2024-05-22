@@ -13,8 +13,7 @@ app.use(cors());
 
 const mongoURI: string = process.env.MONGO_URI || "mongodb+srv://expenso:expenso123@cluster0.ciskzii.mongodb.net/";
 
- 
-  // "mongodb+srv://machadop1407:UvOUTpZW7EH85MZl@personalfinancetracker.qb0edtk.mongodb.net/";
+
 
 mongoose
   .connect(mongoURI)
