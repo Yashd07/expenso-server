@@ -3,13 +3,17 @@ import mongoose from "mongoose";
 import financialRecordRouter from "./routes/financial-records";
 import cors from "cors";
 
+import dotenv from "dotenv";
+
 const app: Express = express();
 const port = process.env.PORT || 3001;
 
 app.use(express.json());
 app.use(cors());
 
-const mongoURI: string = "mongodb+srv://expenso:expenso123@cluster0.ciskzii.mongodb.net/";
+const mongoURI: string = process.env.MONGO_URI || "mongodb+srv://expenso:expenso123@cluster0.ciskzii.mongodb.net/";
+
+ 
   // "mongodb+srv://machadop1407:UvOUTpZW7EH85MZl@personalfinancetracker.qb0edtk.mongodb.net/";
 
 mongoose
