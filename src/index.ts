@@ -12,8 +12,10 @@ app.use(express.json());
 app.use(cors());
 
 const mongoURI: string = process.env.MONGO_URI || "mongodb+srv://expenso:expenso123@cluster0.ciskzii.mongodb.net/";
+//yash
 
-
+ 
+  
 
 mongoose
   .connect(mongoURI)
