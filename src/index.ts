@@ -5,7 +5,7 @@ import cors from "cors";
 
 import dotenv from "dotenv";
 const corsOptions = {
-  origin: 'http://localhost:5173',
+  origin: 'https://expenso-client-six.vercel.app/',
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Specify the methods allowed
   allowedHeaders: ['Content-Type', 'Authorization'], // Specify the headers allowed
   optionsSuccessStatus: 200
