@@ -1,15 +1,15 @@
 import express, { Express } from "express";
 import mongoose from "mongoose";
 import financialRecordRouter from "./routes/financial-records";
-import cors from "cors";
+// import cors from "cors";
 
 import dotenv from "dotenv";
-const corsOptions = {
-  origin: 'https://expenso-client-six.vercel.app',
-  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Specify the methods allowed
-  allowedHeaders: ['Content-Type', 'Authorization'], // Specify the headers allowed
-  optionsSuccessStatus: 200
-};
+// const corsOptions = {
+//   origin: 'https://expenso-client-six.vercel.app',
+//   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Specify the methods allowed
+//   allowedHeaders: ['Content-Type', 'Authorization'], // Specify the headers allowed
+//   optionsSuccessStatus: 200
+// };
 
 
 
@@ -17,7 +17,7 @@ const app: Express = express();
 const port = process.env.PORT || 3001;
 
 app.use(express.json());
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*'); // Allow all origins or specify your frontend URL
   res.header('Access-Control-Allow-Methods', 'GET,HEAD,OPTIONS,POST,PUT');
